@@ -1,4 +1,3 @@
-// src/app/services/cart.service.spec.ts
 import { TestBed } from '@angular/core/testing';
 import { Product } from '../models/Product.interface';
 import { CartService } from './cart.service';

@@ -1,4 +1,3 @@
-// src/app/cart/cart.component.spec.ts
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Observable, of } from 'rxjs';
 import { Product } from '../../models/Product.interface';
