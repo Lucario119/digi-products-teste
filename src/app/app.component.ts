@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'digi-frontend-teste';
+  searchText: string = '';
+
+  onSearch(searchText: string): void {
+    this.searchText = searchText;
+  }
 }

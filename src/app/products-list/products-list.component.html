@@ -1,0 +1,20 @@
+<div>
+  <div class="products-wrapper" *ngIf="filteredProducts.length > 0">
+    <div *ngFor="let product of filteredProducts" class="product-card">
+      <img [src]="product.image" alt="{{ product.name }}" class="product-image">
+      <div>
+        <h2>{{ product.name }}</h2>
+        <p>{{ product.detail }}</p>
+        <p>{{ product.price | currency }}</p>
+        <p *ngIf="product.hero">{{ product.hero }}</p>
+        <p *ngIf="product.info">{{ product.info }}</p>
+        <p *ngIf="product.offer">{{ product.offer }}</p>
+        <button class="add-product-button" *ngIf="!isInCart(product)" (click)="addToCart(product)">Adicionar ao Carrinho</button>
+        <button class="remove-product-button" *ngIf="isInCart(product)" (click)="removeFromCart(product)">Remover do Carrinho</button>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="filteredProducts.length === 0" class="empty-product-list">
+    <p>Nenhum produto encontrado.</p>
+  </div>
+</div>
